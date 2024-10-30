@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        goos: [linux, darwin, windows]
+        goarch: [amd64, 386]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.23.1'
+
+      - name: Build
+        env:
+          GOOS: ${{ matrix.goos }}
+          GOARCH: ${{ matrix.goarch }}
+        run: |
+          mkdir -p build
+          GOOS=${GOOS} GOARCH=${GOARCH} go build -o build/go-sharif-net-${GOOS}-${GOARCH} .
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: go-sharif-net-${{ matrix.goos }}-${{ matrix.goarch }}
+          path: build/
