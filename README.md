@@ -4,6 +4,8 @@
 
 `go-sharif-net` is a command-line interface (CLI) tool written in Go, designed to simplify the authentication process for accessing the internet at Sharif University of Technology. By automating the login process to `net2.sharif.edu`, this tool ensures seamless and efficient network access management.
 
+<img width="1542" alt="image" src="https://github.com/user-attachments/assets/ceacb96d-a535-47c7-b538-6eddced6ef69">
+
 ## Table of Contents
 
 - [Features](#features)
