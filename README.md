@@ -1,6 +1,6 @@
 # go-sharif-net
 
-![go-sharif-net](https://img.shields.io/github/v/release/go-sharif/net?label=Release) ![License](https://img.shields.io/github/license/go-sharif/net)
+![GitHub Release](https://img.shields.io/github/v/release/go-sharif/net?include_prereleases&display_name=release&label=Release) ![License](https://img.shields.io/github/license/go-sharif/net)
 
 `go-sharif-net` is a command-line interface (CLI) tool written in Go, designed to simplify the authentication process for accessing the internet at Sharif University of Technology. By automating the login process to `net2.sharif.edu`, this tool ensures seamless and efficient network access management.
 
